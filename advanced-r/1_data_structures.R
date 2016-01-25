@@ -187,7 +187,7 @@ dimnames(b) <- list(c("one", "two"), c("a", "b", "c"), c("A", "B"))
 library(abind)
 abind(b, b)
 
-# You can transpose a matrix with a t():
+# You can transpose a matrix with t():
 t(a)
 
 # You can also use dim() to create "list-matrices" and "list-arrays", though
@@ -249,7 +249,3 @@ lm(z ~ I(x + y))
 #   1. names
 #   2. row.names
 #   3. class (data.frame)
-
-
-
-
