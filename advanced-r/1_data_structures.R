@@ -137,7 +137,6 @@ x <- setNames(1:2, c("a", "b"))
 # Built on top of integer vectors using two attributes:
 #   the class(), factor
 #   the levels(), which defines the set of allowed values
-
 x <- factor(c("a", "b", "b", "a"))
 typeof(x)
 class(x)
@@ -148,8 +147,8 @@ x[2] <- "c"
 # You can't combine factors:
 x <- c(factor("a"), factor("b"))
 x
-typeof(x)
-class(x)
+typeof(x)  # integer
+class(x)   # integer
 
 # Using a factor rather than a character vector makes it obvious when a group
 # contains no observations:
@@ -170,7 +169,6 @@ table(sex.factor)
 
 # Adding a dim() attribute to an atomic vector allows it to behave like a
 # multi-dimensional array.
-
 a <- matrix(1:6, ncol = 3, nrow = 2)
 b <- array(1:12, c(2, 3, 2))
 
